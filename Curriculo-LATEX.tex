@@ -1,0 +1,167 @@
+% Document class and basic packages
+\documentclass[a4paper]{article}
+
+% Essential packages
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[left=2cm, right=2cm, top=2cm]{geometry}
+\usepackage{longtable}
+\usepackage[brazil]{babel}
+
+
+% Document settings
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+% Custom commands
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex}
+
+\newcommand{\area}[2]{
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder}{
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header}[1]{
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer}[3]{
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact}[3]{
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses}[4]{
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school}[4]{
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+% Begin document
+\begin{document}
+    \vspace*{-40pt}
+
+    % Header section
+    \vspace*{-2pt}
+    \begin{center}
+        {\Huge \scshape {Enzo Rincon}}\\
+        \vspace*{2pt}
+        \textbf{Desenvolvedor de Sistemas | Técnico de Manutenção}\\
+        \vspace*{2pt}
+        \href{mailto:enzorincon2003@gmail.com}{enzorincon2003@gmail.com} | \href{tel:+55 11 972623614}{+55 11 972623614}\\
+        \vspace*{4pt}
+        \textbf{\href{https://www.linkedin.com/in/enzorincon}{LinkedIn | }}\textbf{\href{https://github.com/Rincon23}{GitHub}}\\
+    \end{center}
+
+    % Summary section
+    \header{Resumo}
+    \vspace{2mm}
+    Profissional de TI com experiência em suporte técnico, manutenção de hardware e desenvolvimento de sistemas. Atua como Técnico de Manutenção N3, prestando suporte especializado à Receita Federal, com foco em resolução de problemas complexos, redes e infraestrutura. Possui conhecimentos práticos em Python, Flask, bancos de dados e automação de processos.
+    \vspace{2mm}
+
+    % Experience section
+    \header{Experiência Profissional}
+    \vspace{2mm}
+
+    \textbf{Wyntech Serviços em Informática}\textbf{ | Técnico de Manutenção N3} \hfill  Abr/2025 – Atualidade\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Diagnóstico avançado de falhas em hardware, software e redes.
+        \item Suporte técnico especializado para incidentes críticos (nível 3).
+        \item Execução de manutenção preventiva e corretiva.
+        \item Elaboração de documentação técnica e relatórios.
+    \end{itemize}
+
+    \textbf{Optera Desenvolvimento de Sistemas}\textbf{ | Analista de Suporte} \hfill  Mar/2025 – Abr/2025\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Suporte técnico (telefônico, presencial, remoto, e-mail, Teams e via acesso remoto).
+        \item Apontamento, classificação, acompanhamento e monitoramento de ocorrências via sistema de Service Desk.
+        \item Instalação, configuração e reparo de sistemas operacionais e aplicativos para Windows.
+        \item Manutenção de hardware (desktops e laptops) e infraestruturas de redes.
+    \end{itemize}
+
+    \textbf{Exército Brasileiro}\textbf{ | Soldado} \hfill  Mar/2022 – Mar/2025\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Gestão do almoxarifado, criação de documentos e gerenciamento de planilhas.
+        \item Desenvolvimento de ética profissional, conduta e espírito de liderança.
+        \item Experiência em montagem de computadores e infraestrutura de redes.
+    \end{itemize}
+
+    \textbf{Dellas}\textbf{ | Auxiliar Administrativo} \hfill  Jan/2019 – Fev/2022\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Gestão do almoxarifado e controle de estoque através de planilhas.
+        \item Comunicação com fornecedores e clientes.
+    \end{itemize}
+
+    % Projects section
+    \header{Projetos}
+    \vspace{2mm}
+    
+    \textbf{BestMeals}\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Sistema de cadastro e avaliação de restaurantes, utilizando Python, Flask, HTML5, CSS3 e SQLite.
+    \end{itemize}
+    
+    \textbf{Campo Minado}\\
+    \vspace{-3mm}
+    \begin{itemize} \itemsep -3pt
+        \item Jogo simples desenvolvido em C++, feito para um projeto acadêmico.
+    \end{itemize}
+
+    % Skills section
+    \header{Habilidades}
+    \vspace{2mm}
+    \begin{longtable}{p{5cm}p{12cm}}
+        Linguagem de Programação: & Python, Java Script, C++\\
+        Desenvolvimento Web: & HTML, CSS, Flask \\
+        Banco de Dados: & SQLite, SQLServer \\
+        Ferramentas: & Git, GitHub, VS Code, Google Drive, ChatGPT, Pacote Office \\
+        Idiomas: & Inglês (intermediário)
+    \end{longtable}
+
+    % Education section
+    \header{Educação}
+    \vspace{2mm}
+    \textbf{UniAnchieta}\hfill Jundiaí, SP\\
+    Bacharelado em Ciências da Computação\hfill Jan 2023 - Dez 2026\\
+    
+    
+    \vspace{1mm}
+
+\end{document}
